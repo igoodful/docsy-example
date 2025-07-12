@@ -1,0 +1,47 @@
+{{ with .Get "base" }}
+<canvas
+  id="exponential-chart"
+  width="30"
+  height="20"
+  class="container"
+></canvas>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  var base = {{ . }};
+
+  var ctx = document.getElementById('exponential-chart').getContext('2d');
+  var labels = [];
+  var data = [];
+
+  for (var x = -10; x <= 10; x += 0.01) {
+    labels.push(x);
+    data.push(Math.sin(x));
+  }
+
+  new Chart(ctx, {
+    type: 'line',
+    borderColor: '#36A2EB',
+    data: {
+      labels: labels,
+      datasets: [{
+        label: '指数函数',
+        data: data,
+        borderColor: 'blue',
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        x: {
+          type: 'linear',
+          position: 'bottom'
+        },
+        y: {
+          suggestedMin: -2,
+          suggestedMax: 2,
+        }
+      }
+    }
+  });
+</script>
+{{ end }}

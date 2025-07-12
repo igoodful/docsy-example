@@ -1,0 +1,77 @@
+
+.mermaid {
+  overflow-x: auto;
+  max-width: 80%;
+  border: 1px solid rgb(222, 226, 230);
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  // mermaid diagram - sequence diagram
+  .actor {
+    fill: #5745bd !important;
+  }
+  text.actor {
+    font-size: 18px !important;
+    stroke: white !important;
+    fill: white !important;
+  }
+  .activation0 {
+    fill: #c9e9ec !important;
+  }
+}
+
+// blockquotes and callouts
+body {
+  .alert {
+    // Override Docsy styles
+    padding: 0.4rem 0.4rem 0.4rem 1rem;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    border-right: 1px solid #eee;
+    border-radius: 0.25em;
+    border-left-width: 0.5em; // fallback in case calc() is missing
+    background: #fff;
+    color: #000;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+  // Set minimum width and radius for alert color
+  .alert {
+      border-left-width: calc(max(0.5em, 4px));
+      border-top-left-radius: calc(max(0.5em, 4px));
+      border-bottom-left-radius: calc(max(0.5em, 4px));
+  }
+  .alert.callout.caution {
+    border-left-color: #e6a700;
+  }
+  .alert.callout.note {
+    border-left-color: #009400;
+  }
+  .alert.callout.warning {
+    border-left-color: #e13238;
+  }
+  .alert.third-party-content {
+    border-left-color: #444;
+  }
+
+  h1:first-of-type + .alert.callout {
+    margin-top: 1.5em;
+  }
+}
+
+// Special color for third party content disclaimers
+.alert.third-party-content { border-left-color: #222 };
+
+
+
+// ================================================================== 2025-07-12
+
+
+// ==================================================================
+
+
+
+
+

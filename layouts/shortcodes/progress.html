@@ -1,0 +1,14 @@
+{{ $color_list := slice "primary"  "success" "warning" "info" "danger" "dark" "secondary" "danger-subtle" "success-subtle" "info-subtle" "warning-subtle" "primary-subtle" "secondary-subtle" }}
+{{ $value_list := .Get "value"  }}
+{{ $value_list = split $value_list ";" }}
+<div class="container" style="float: left;">
+<div class="progress-stacked" >
+    {{ range $k, $v := $value_list }}
+    <div class="progress" role="progressbar" aria-valuenow="{{ $v }}"
+        aria-valuemin="0" aria-valuemax="100" style="width: {{$v}}%" >
+        <div class="progress-bar bg-{{ index $color_list $k  }}" > {{$v}}% </div>
+    </div>
+    {{ end }}
+</div>
+</div>
+

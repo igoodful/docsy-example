@@ -3,4 +3,36 @@
 Add styles or override variables from the theme here.
 
 */
+// 禁用默认谷歌字体库
 
+
+
+/* This file is provided by Docsy as an entry point to styling.
+Add styles or override variables from the theme here. */
+
+// kubernetes $primary: #326ce5;
+// $primary: #0d6efd;
+@import "skin";
+@import "custom";
+
+// #234ca0 #2856b7 #2d61ce #326ce5 #477be8 #5b89ea
+$primary: #1e4189;
+$secondary: #5b89ea;
+$success: #009400;
+$info: #41a0bd49;
+$warning: #e6a700;
+$danger: #e13238;
+$light: #f8f9fa;
+$dark: #212529;
+
+// 引入自定义字体
+// Helvetica Roboto-Regular
+$font-family-serif: 'YourCustomFont', serif;
+$font-family-sans-serif: 'YourCustomFont', sans-serif;
+
+@font-face {
+        font-family: 'YourCustomFont';
+        src: url('/fonts/PingFangSC-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+}

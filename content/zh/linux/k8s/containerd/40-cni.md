@@ -1,0 +1,21 @@
+---
+title: cni
+date: 2023-10-12
+weight: 400
+description: A short lead description about this content page. It can be **bold** or _italic_ and can be split over multiple paragraphs.
+---
+
+{{< alert >}}
+This is a placeholder page. Replace it with your own content.
+{{< /alert >}}
+
+
+
+
+## 下载地址：https://github.com/containernetworking/plugins/releases
+
+```bash
+wget https://github.com/containernetworking/plugins/releases/download/v1.3.0/cni-plugins-linux-amd64-v1.3.0.tgz
+mkdir -p /opt/cni/bin
+tar Cxzvf /opt/cni/bin cni-plugins-linux-amd64-v1.3.0.tgz
+```
